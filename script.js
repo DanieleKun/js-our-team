@@ -58,12 +58,9 @@ const createMyEl = (myClass, myEl) => {
     return myElement;
 }
 
+ // Aggiungo i vari elementi nel DOM
 for (let i = 0; i < membersTeam.length; i++) {
     let cardMembers = membersTeam[i];
-
-
-    // Aggiungo i vari elementi nel DOM
-    // let myContainerEl = createMyEl("team-container");
 
     let myCard = createMyEl("team-card", "div");
 
@@ -75,7 +72,7 @@ for (let i = 0; i < membersTeam.length; i++) {
 
     myImg.src = cardMembers.image;
 
-    myText.innerHTML = `<h3>${cardMembers.nome}</h3><p>${cardMembers.ruolo}</p>`;
+    myText.innerHTML = `<h3>${cardMembers.name}</h3><p>${cardMembers.role}</p>`;
 
     myCardImage.append(myImg);
 
