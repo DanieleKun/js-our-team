@@ -10,44 +10,44 @@ const myTeamContainer = document.querySelector(".team-container");
 // const myCardText = document.querySelector(".card-text");
 
 // membri del team
-const membersTeam = 
-[
-    {
-        "name" : "Wayne Barnett",
-        "role" : "Founder & CEO",
-        "image" : "img/wayne-barnett-founder-ceo.jpg"
-    },
+const membersTeam =
+    [
+        {
+            "name": "Wayne Barnett",
+            "role": "Founder & CEO",
+            "image": "img/wayne-barnett-founder-ceo.jpg"
+        },
 
-    {
-        "name" : "Angela Caroll",
-        "role" : "Chief Editor",
-        "image" : "img/angela-caroll-chief-editor.jpg"
-    },
+        {
+            "name": "Angela Caroll",
+            "role": "Chief Editor",
+            "image": "img/angela-caroll-chief-editor.jpg"
+        },
 
-    {
-        "name" : "Walter Gordon",
-        "role" : "Office Manager",
-        "image" : "img/angela-lopez-social-media-manager.jpg"
-    },
+        {
+            "name": "Walter Gordon",
+            "role": "Office Manager",
+            "image": "img/angela-lopez-social-media-manager.jpg"
+        },
 
-    {
-        "name" : "Angela Lopez",
-        "role" : "Social Media Manager",
-        "image" : "img/angela-caroll-chief-editor.jpg"
-    },
+        {
+            "name": "Angela Lopez",
+            "role": "Social Media Manager",
+            "image": "img/angela-caroll-chief-editor.jpg"
+        },
 
-    {
-        "name" : "Scott Estrada",
-        "role" : "Developer",
-        "image" : "img/scott-estrada-developer.jpg"
-    },
+        {
+            "name": "Scott Estrada",
+            "role": "Developer",
+            "image": "img/scott-estrada-developer.jpg"
+        },
 
-    {
-        "name" : "Barbara Ramos",
-        "role" : "Graphic Designer",
-        "image" : "img/barbara-ramos-graphic-designer.jpg"
-    },
-];
+        {
+            "name": "Barbara Ramos",
+            "role": "Graphic Designer",
+            "image": "img/barbara-ramos-graphic-designer.jpg"
+        },
+    ];
 
 console.log(membersTeam);
 
@@ -58,32 +58,32 @@ const createMyEl = (myClass, myEl) => {
     return myElement;
 }
 
-for (let i = 0; i < membersTeam.length; i++){
+for (let i = 0; i < membersTeam.length; i++) {
     let cardMembers = membersTeam[i];
 
 
-// Aggiungo i vari elementi nel DOM
-// let myContainerEl = createMyEl("team-container");
+    // Aggiungo i vari elementi nel DOM
+    // let myContainerEl = createMyEl("team-container");
 
-let myCard = createMyEl("team-card", "div");
+    let myCard = createMyEl("team-card", "div");
 
-let myCardImage = createMyEl("card-image", "div");
+    let myCardImage = createMyEl("card-image", "div");
 
-let myImg = document.createElement("img", "div");
+    let myImg = document.createElement("img", "div");
 
-let myText = createMyEl("card-text", "div");
+    let myText = createMyEl("card-text", "div");
 
-myImg.src = cardMembers.image;
+    myImg.src = cardMembers.image;
 
-myText.innerHTML = `<h3>${cardMembers.nome}</h3><p>${cardMembers.ruolo}</p>`;
+    myText.innerHTML = `<h3>${cardMembers.nome}</h3><p>${cardMembers.ruolo}</p>`;
 
-myCardImage.append(myImg);
+    myCardImage.append(myImg);
 
-myCard.append(myCardImage);
+    myCard.append(myCardImage);
 
-myCard.append(myText);
+    myCard.append(myText);
 
-myTeamContainer.append(myCard);
+    myTeamContainer.append(myCard);
 
 };
 
